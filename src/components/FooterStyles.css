@@ -1,0 +1,27 @@
+
+
+
+    .root{
+        background-color:#222831;
+        font: "Segoe UI";
+        height: 100px;
+    }
+    .footer__copyRight{
+        text-align: center;
+        color: white;
+    }
+    .icon{
+        color: white;
+        font-size: 40px;
+        margin-top: 10px;
+        margin-left: 15px;
+        padding: 6px;
+        border-radius : 50%;
+        background-color:#222831;
+        
+ }
+ .icon:hover{
+    color: #111010;
+    background-color: white;
+    transform: translateY(-2px);
+}

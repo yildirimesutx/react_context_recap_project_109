@@ -21,7 +21,7 @@ const register = ['Register','Login'];
 
 const Navbar = () => {
 
-const currentUser = true
+const currentUser = false
 
 const navigate = useNavigate()
 
@@ -44,7 +44,7 @@ const navigate = useNavigate()
   };
 
   return (
-    <AppBar position="static"  sx={{backgroundColor:"black"}}>
+    <AppBar position="static"  sx={{backgroundColor:"#222831"}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
