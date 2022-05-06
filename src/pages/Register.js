@@ -1,16 +1,19 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import { createUser } from "../helpers/firebase"
 
 const Register = () => {
 
     const [name, setName] = useState()
     const [email, setEmail] = useState()
     const [password, setPassword] = useState()
-
+    const navigate = useNavigate()
     
  
     const handleSubmit = (e)=>{
         e.preventDefault()
         console.log(name, email, password);
+        createUser(name, email, password, navigate)
 
     }  
 
@@ -40,7 +43,15 @@ const Register = () => {
     <input type="checkbox" class="form-check-input" id="exampleCheck1"/>
     <label class="form-check-label text-white" for="exampleCheck1">Remember me</label>
   </div>
-  <button type="submit" class="btn btn-primary mw-75" >Register</button>
+  {/* <button type="submit" class="btn btn-primary mw-75" >Register</button> */}
+
+  <input
+            type="submit"
+            className="btn btn-secondary form-control mt-5"
+            value="Login"
+            
+            // onSubmit={handleSubmit}
+          />
 </form>
 <button class='btn btn-secondary mt-3 mw-25'> Continue <img src="https://seeklogo.com/images/G/google-2015-new-logo-D28485E83C-seeklogo.com.png" alt="" style={{width:"5rem"}} /></button>    
         
